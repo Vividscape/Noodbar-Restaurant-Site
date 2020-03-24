@@ -1,0 +1,19 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "Restaurant Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/vividscape/restaurant.git"
+  },
+  "author": "Ehi Odigie",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/vividscape/restaurant#readme",
+  "dependencies": {
+    "bootstrap-icons": "^1.0.0-alpha2"
+  }
+}

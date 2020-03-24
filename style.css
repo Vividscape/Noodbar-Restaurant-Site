@@ -1,0 +1,558 @@
+/* --------------------------------------------------------------
+
+   * Resets default browser CSS.
+
+-------------------------------------------------------------- */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1.5;
+}
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+table, td, th { vertical-align: middle; }
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+/* Remove annoying border on linked images. */
+a img { border: none; }
+
+/* --------------------------------------------------------------
+
+* Sets up some sensible default typography.
+
+-------------------------------------------------------------- */
+
+/* Default font settings.
+   The font-size percentage is of 16px. (0.75 * 16px = 12px) */
+body {
+  font-size: 75%;
+  color: #222;
+  background: #fff;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 { font-weight: normal; color: #111; }
+
+h1 { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+h2 { font-size: 2em; margin-bottom: 0.75em; }
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+h6 { font-size: 1em; font-weight: bold; }
+
+h1 img, h2 img, h3 img,
+h4 img, h5 img, h6 img {
+  margin: 0;
+}
+
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p           { margin: 0 0 1.5em; }
+p img.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
+
+a:focus,
+a:hover     { color: #000; }
+a           { color: #009; text-decoration: underline; }
+
+blockquote  { margin: 1.5em; color: #666; font-style: italic; }
+strong      { font-weight: bold; }
+em,dfn      { font-style: italic; }
+dfn         { font-weight: bold; }
+sup, sub    { line-height: 0; }
+
+abbr,
+acronym     { border-bottom: 1px dotted #666; }
+address     { margin: 0 0 1.5em; font-style: italic; }
+del         { color:#666; }
+
+pre 				{ margin: 1.5em 0; white-space: pre; }
+pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+
+
+/* Lists
+-------------------------------------------------------------- */
+
+li ul,
+li ol       { margin:0 1.5em; }
+ul, ol      { margin: 0 0 1.5em 1.5em; }
+
+ul          { list-style-type: disc; }
+ol          { list-style-type: decimal; }
+
+dl          { margin: 0 0 1.5em 0; }
+dl dt       { font-weight: bold; }
+dd          { margin-left: 1.5em;}
+
+
+/* Tables
+-------------------------------------------------------------- */
+
+table       { margin-bottom: 1.4em; width:100%; }
+th          { font-weight: bold; }
+thead th 		{ background: #c3d9ff; }
+th,td,caption { padding: 4px 10px 4px 5px; }
+tr.even td  { background: #e5ecf9; }
+tfoot       { font-style: italic; }
+caption     { background: #eee; }
+
+/* Forms
+-------------------------------------------------------------- */
+
+input {
+    border:none;
+    background-image:none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+/* --------------------------------------------------------------
+
+  * Global CSS styling.
+
+-------------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+p {
+  color: #6b6b6b;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+h4 {
+  font-family: 'Architects Daughter';
+  font-size: 30px;
+  color: #cf9b67;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-family: 'Oswald';
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #333333;
+  letter-spacing: 2px;
+}
+
+h5 {
+  font-family: 'Oswald';
+  font-size: 20px;
+  font-weight: 400;
+  color: #cf9b67;
+  margin-bottom: 0.5em;
+}
+
+/* --------------------------------------------------------------
+
+  * Header
+
+-------------------------------------------------------------- */
+
+header {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/header_background.jpg') center / cover fixed no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+h2 {
+  font-family: 'Montez';
+}
+
+/* Top Bar -------------------------------------------------- */
+
+#top-bar {
+  background: #000;
+  color: #fff;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+.contact-info {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.top-bar-contact {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+#contact-info i {
+  color: #cf9b67
+}
+
+.social {
+  font-size: 16px;
+  color: #5a5a5a;
+}
+
+.social i:not(.fa-instagram) {
+  margin-right: 15px;
+}
+
+
+/* Navigation -------------------------------------------------- */
+
+#navigation {
+  background: rgba(0,0,0,0.5);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+nav > * {
+  margin-bottom: 0;
+}
+
+.nav-menu {
+  list-style: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-menu, nav h2{
+  color: #fff;
+}
+
+.nav-menu li {
+  display: inline-block;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin-right: 35px;
+}
+
+.nav-menu li:last-child {
+  margin: 0;
+}
+
+/* Intro ------------------------------------------------------ */
+
+.intro h1 {
+  font-size: 78px;
+  font-family: 'Oswald';
+  margin-bottom: 20px;
+}
+
+.intro h2 {
+  font-size: 78px;
+  margin-bottom: 0;
+}
+
+.intro h3 {
+  font-size: 40px;
+  font-family: 'Architects Daughter';
+  text-transform: none;
+}
+
+.intro h1,
+.intro h2,
+.intro h3 {
+  color: #fff;
+}
+
+.intro {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  margin-left: -343.71px;
+}
+
+.scroll-down {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -38.9px;
+}
+
+.scroll-down p {
+  color: #fff;
+  font-size: 20px;
+}
+
+.fa-caret-down {
+  font-size: 24px;
+}
+
+
+/* --------------------------------------------------------------
+
+  * Main
+
+-------------------------------------------------------------- */
+
+
+/* special offers ------------------------------------------------------ */
+
+.special-offers {
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+}
+
+.special-offers > div:first-child {
+  margin-right: 68px;
+}
+
+.special-items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.special-items:last-child {
+  margin: 0;
+}
+
+.special-items img {
+  width: 110px;
+  border: 10px solid #f2f2f2;
+  margin-right: 20px;
+}
+
+.special-items .price {
+  border: 1px solid #eaeaea;
+  padding: 25px;
+  border-radius: 50%;
+  font-family: 'Oswald';
+  font-size: 26px;
+  color: #000;
+}
+
+.item-description {
+  width: 300px;
+}
+
+.explore-menu {
+  width: 50%;
+  position: relative;
+}
+
+.explore-menu img {
+  width: 100%;
+}
+
+.explore-menu a {
+  color: #000;
+  font-size: 24px;
+  font-family: 'Oswald';
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #cf9b67;
+  margin-left: -75px;
+  margin-top: -75px;
+  text-transform: uppercase;
+  line-height: 28px;
+  padding-top: 27px;
+  transition: background-color .1s linear, color .1s linear;
+}
+
+.explore-menu a span {
+  font-family: 'Architects Daughter';
+  text-transform: none;
+  /* color: #cf9b67; */
+}
+
+.explore-menu a:hover {
+  color: #fff;
+  background-color: #cf9b67;
+}
+
+
+/* .explore-menu a span:hover {
+  color: #fff;
+} */
+
+/* Reservations ------------------------------------------------------ */
+
+#reservations {
+  position: relative;
+  overflow: hidden;
+}
+
+#reservations .bg-image {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/oana-maria-sofronia.jpg') center / cover fixed no-repeat;
+  height: 830px;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  margin: -5px -10px -10px -5px;
+  transform: scale(1.03);
+}
+
+#reservations .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+#reservations h3 {
+  color: #fff;
+}
+
+.reserve-form {
+  width: 50%;
+  min-width: 650px;
+  height: 830px;
+  background-color: #181818;
+}
+
+.reserve-container {
+  padding: 100px 60px;
+}
+
+#reservations form input  {
+  width: 100%;
+}
+
+form div.form-row:first-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 15px;
+  margin-bottom: 15px;
+}
+
+form div.form-row:first-child input {
+  height: 62px;
+  border-radius: 10px;
+}
+
+form div.message {
+  margin-bottom: 40px;
+}
+
+form textarea {
+  width: 100%;
+  resize: none;
+  height: 144px;
+  padding-top: 20px;
+  border-radius: 10px;
+}
+
+#reservations .btn {
+  background-color: #cf9b67;
+  color: #fff;
+  font-family: 'open sans';
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  width: auto;
+  padding: 22px 80px;
+  border-radius: 10px;
+  transition: background-color .1s linear, color .1s linear;
+}
+
+#reservations .btn:hover {
+  background-color: #fff;
+  color: #cf9b67;
+  cursor: pointer;
+}
+
+.form-btn {
+  text-align: center;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: 'open sans';
+  font-size: 16px;
+  opacity: 1; /* Firefox */
+  padding-left: 25px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-family: 'open sans';
+  font-size: 16px;
+  padding-left: 25px;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  font-family: 'open sans';
+  font-size: 16px;
+  padding-left: 25px;
+}
+
+
+/* Today Special ------------------------------------------------------ */
+
+#today-special {
+  background-image: url('assets/today-special-bg.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+#today-special .container > div {
+  text-align: center;
+  padding-top: 100px;
+}
+
+#today-special .carousel-item .w-75 {
+    width: 65%!important;
+}
