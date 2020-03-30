@@ -157,28 +157,91 @@ p {
   margin: 0 auto;
 }
 
-h4 {
-  font-family: 'Architects Daughter';
-  font-size: 30px;
-  color: #cf9b67;
-  margin-bottom: 15px;
+h2 {
+  font-family: 'Montez';
 }
 
 h3 {
+  font-family: 'Oswald';
+  font-size: 20px;
+  font-weight: 400;
+  color: #cf9b67;
+  margin-bottom: 0.5em;
+}
+
+.section-title {
   font-family: 'Oswald';
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 600;
   color: #333333;
   letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 35px;
 }
 
-h5 {
-  font-family: 'Oswald';
-  font-size: 20px;
-  font-weight: 400;
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 6px;
+  height: 6px;
+  background-color: #cf9b67;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  bottom: 1px;
+  width: 29px;
+  height: 2px;
+  background-color: #cf9b67;
+}
+
+.section-title.divider-2::before {
+  z-index: 1;
+  width: 20px;
+  left: 50%;
+  margin-left: -10px;
+  content: "●";
+  color: rgb(207, 155, 103);
+  line-height: 6px;
+  font-size: 12px;
+  height: 10px;
+  bottom: -3px;
+  padding-left: 6px;
+  text-align: left;
+  background: rgb(255, 255, 255);
+  border-radius: 0px;
+}
+
+.section-title.divider-2::after {
+  width: 78px;
+  height: 2px;
+  left: 50%;
+  margin-left: -39px;
+  z-index: 0;
+}
+
+.section-subtitle {
+  display: block;
+  font-family: 'Architects Daughter';
+  font-size: 30px;
   color: #cf9b67;
-  margin-bottom: 0.5em;
+  margin-bottom: 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+span.text-center {
+  padding-top: 100px;
 }
 
 /* --------------------------------------------------------------
@@ -193,9 +256,6 @@ header {
   position: relative;
 }
 
-h2 {
-  font-family: 'Montez';
-}
 
 /* Top Bar -------------------------------------------------- */
 
@@ -421,11 +481,6 @@ nav > * {
   background-color: #cf9b67;
 }
 
-
-/* .explore-menu a span:hover {
-  color: #fff;
-} */
-
 /* Reservations ------------------------------------------------------ */
 
 #reservations {
@@ -453,7 +508,7 @@ nav > * {
   z-index: 2;
 }
 
-#reservations h3 {
+#reservations h2 {
   color: #fff;
 }
 
@@ -548,11 +603,34 @@ form textarea {
   background-repeat: no-repeat;
 }
 
-#today-special .container > div {
+/* #today-special .container > div {
   text-align: center;
   padding-top: 100px;
-}
+} */
 
 #today-special .carousel-item .w-75 {
     width: 65%!important;
+}
+
+.carousel {
+    margin-bottom: 75px;
+}
+
+.carousel-item .price {
+  font-family: 'Oswald';
+  font-size: 20px;
+  color: #cf9b67;
+}
+
+.carousel-item h3 {
+  margin-top: 30px;
+  color: #000;
+}
+
+/* Restaurant Menu ------------------------------------------------------ */
+
+#restaurant-menu {
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+  border-width: 1px 0;
 }
