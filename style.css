@@ -489,7 +489,7 @@ nav > * {
 }
 
 #reservations .bg-image {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/oana-maria-sofronia.jpg') center / cover fixed no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/reservations-bg.jpg') center / cover fixed no-repeat;
   height: 830px;
   filter: blur(5px);
   -webkit-filter: blur(5px);
