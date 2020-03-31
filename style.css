@@ -627,6 +627,10 @@ form textarea {
   color: #000;
 }
 
+.carousel-item img {
+  width: 35%;
+}
+
 /* Restaurant Menu ------------------------------------------------------ */
 
 #restaurant-menu {
