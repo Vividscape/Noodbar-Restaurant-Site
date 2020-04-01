@@ -177,13 +177,28 @@
       <section id="restaurant-menu">
         <span class="section-subtitle text-center">Food Lover</span>
         <h2 class="section-title divider-2 text-center">restaurant menu</h2>
-        <ul>
-          <li ><a href="#" class="current" data-filter="all"></a>all dishes</li>
-          <li><a href="#" data-filter="dinner"></a>signature</cli>
-          <li><a href="#" data-filter="lunch"></a>chicken</li>
-          <li><a href="#" data-filter="all"></a>beef</li>
-          <li><a href="#" data-filter="all"></a>vegetable</li>
-        </ul>
+        <div id="myBtnContainer" class="container">
+          <button class="btn active" onclick="filterSelection('all')">all dishes</button>
+          <button class="btn" onclick="filterSelection('signature')">signature</button>
+          <button class="btn" onclick="filterSelection('chicken')">chicken</button>
+          <button class="btn" onclick="filterSelection('beef')">beef</button>
+          <button class="btn" onclick="filterSelection('vegetable')">vegetable</button>
+        </div>
+        <div class="container">
+          <div class="filterDiv signature">BMW</div>
+          <div class="filterDiv beef">Orange</div>
+          <div class="filterDiv chicken">Volvo</div>
+          <div class="filterDiv vegetable">Red</div>
+          <div class="filterDiv beef">Mustang</div>
+          <div class="filterDiv signature">Blue</div>
+          <div class="filterDiv chicken">Cat</div>
+          <div class="filterDiv vegetable">Dog</div>
+          <div class="filterDiv signature">Melon</div>
+          <div class="filterDiv chicken">Kiwi</div>
+          <div class="filterDiv signature">Banana</div>
+          <div class="filterDiv vegetable">Lemon</div>
+          <div class="filterDiv beef">Cow</div>
+        </div>
       </section>
       <section>
 
@@ -197,6 +212,7 @@
     </footer>
   </body>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
 </html>
