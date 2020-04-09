@@ -153,7 +153,7 @@ p {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -489,7 +489,7 @@ nav > * {
 }
 
 #reservations .bg-image {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/oana-maria-sofronia.jpg') center / cover fixed no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/reservations-bg.jpg') center / cover fixed no-repeat;
   height: 830px;
   filter: blur(5px);
   -webkit-filter: blur(5px);
@@ -627,10 +627,108 @@ form textarea {
   color: #000;
 }
 
+.carousel-item img {
+  width: 35%;
+}
+
 /* Restaurant Menu ------------------------------------------------------ */
 
 #restaurant-menu {
   background: #fafafa;
   border: 1px solid #eaeaea;
   border-width: 1px 0;
+}
+
+#restaurant-menu .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#restaurant-menu h2 {
+  margin-bottom: 1em;
+}
+
+#myBtnContainer {
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.container {
+  overflow: hidden;
+}
+
+#restaurant-menu .filter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 100px;
+}
+
+.restaurant-filter {
+  text-align: center;
+}
+
+.filterDiv {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  display: none;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  font-family: 'Oswald';
+  font-weight: 400;
+  font-size: 14px;
+  color: #6b6b6b;
+  border-radius: 10px;
+  border: 1px solid #eaeaea;
+  padding: 12px 16px;
+  cursor: pointer;
+  margin-right: 30px;
+  width: 170px;
+  text-transform: uppercase;
+}
+
+button.btn:last-of-type {
+    margin: 0;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  color: #fff;
+  background-color: #cf9b67;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #cf9b67;
+  color: #fff;
+}
+
+.is-animated {
+  animation: .7s zoom-in;
+}
+
+@keyframes zoom-in {
+  0% {
+   transform: none;
+  }
+  25% {
+    transform: scale(0);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+/* Testimonials ------------------------------------------------------ */
+
+.slide {
+  display: block;
 }
