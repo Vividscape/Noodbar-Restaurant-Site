@@ -1,4 +1,4 @@
-// Restaurant Menu script -------------------------------------- //
+// Restaurant Menu Filter -------------------------------------- //
 
 filterSelection("signature")
 function filterSelection(c) {
@@ -51,7 +51,7 @@ for (var i = 0; i < btns.length; i++) {
 
 
 
-// Testimonials -------------------------------------- //
+// Testimonials Slider -------------------------------------- //
 
 $(document).ready(function(){
     $("#testimonial-slider").owlCarousel({
@@ -64,3 +64,122 @@ $(document).ready(function(){
         autoPlay:true
     });
 });
+
+// Init Google Maps -------------------------------------- //
+
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var la = {lat: 34.0382396, lng: -118.2466301};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 15, center: la,
+        disableDefaultUI: true,
+        gestureHandling: 'none',
+        zoomControl: false,
+        styles: [
+      {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+      {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+      {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+      {
+        featureType: 'administrative.locality',
+        elementType: 'labels.text.fill',
+        stylers: [{color: '#d59563'}]
+      },
+      {
+        featureType: 'road',
+        elementType: 'geometry',
+        stylers: [{color: '#38414e'}]
+      },
+      {
+        featureType: 'road',
+        elementType: 'geometry.stroke',
+        stylers: [{color: '#212a37'}]
+      },
+      {
+        featureType: 'road',
+        elementType: 'labels.text.fill',
+        stylers: [{color: '#9ca5b3'}]
+      },
+      {
+        featureType: 'road.highway',
+        elementType: 'geometry',
+        stylers: [{color: '#746855'}]
+      },
+      {
+        featureType: 'road.highway',
+        elementType: 'geometry.stroke',
+        stylers: [{color: '#1f2835'}]
+      },
+      {
+        featureType: 'road.highway',
+        elementType: 'labels.text.fill',
+        stylers: [{color: '#f3d19c'}]
+      },
+      {
+        featureType: 'transit',
+        elementType: 'geometry',
+        stylers: [{color: '#2f3948'}]
+      },
+      {
+        featureType: 'transit.station',
+        elementType: 'labels.text.fill',
+        stylers: [{color: '#d59563'}]
+      },
+      {
+        featureType: 'water',
+        elementType: 'geometry',
+        stylers: [{color: '#17263c'}]
+      },
+      {
+        featureType: 'water',
+        elementType: 'labels.text.fill',
+        stylers: [{color: '#515c6d'}]
+      },
+      {
+        featureType: 'water',
+        elementType: 'labels.text.stroke',
+        stylers: [{color: '#17263c'}]
+      },
+      {
+        featureType: 'poi.business',
+        stylers: [{visibility: 'off'}]
+      },
+      {
+        featureType: 'transit',
+        elementType: 'labels.icon',
+        stylers: [{visibility: 'off'}]
+      },
+      {
+        featureType: 'poi.school',
+        stylers: [{visibility: 'off'}]
+      },
+      {
+        featureType: 'poi.place_of_worship',
+        stylers: [{visibility: 'off'}]
+      },
+      {
+        featureType: 'poi.medical',
+        stylers: [{visibility: 'off'}]
+      },
+      {
+        featureType: 'poi.attraction',
+        stylers: [{visibility: 'off'}]
+      },
+      {
+        featureType: 'poi.sports_complex',
+        stylers: [{visibility: 'off'}]
+      },
+      {
+        featureType: 'poi.government',
+        stylers: [{visibility: 'off'}]
+      }
+    ]
+  });
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: la, map: map});
+}
+
+var listener = map.addListener('click', aFunction);
+
+google.maps.event.removeListener(listener);

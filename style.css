@@ -244,6 +244,27 @@ span.text-center {
   padding-top: 100px;
 }
 
+input[type="text"], textarea {
+  padding-left: 25px;
+  font-size: 16px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: 'open sans';
+  font-size: 16px;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-family: 'open sans';
+  font-size: 16px;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  font-family: 'open sans';
+  font-size: 16px;
+}
+
 /* --------------------------------------------------------------
 
   * Header
@@ -575,26 +596,6 @@ form textarea {
   text-align: center;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  font-family: 'open sans';
-  font-size: 16px;
-  opacity: 1; /* Firefox */
-  padding-left: 25px;
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  font-family: 'open sans';
-  font-size: 16px;
-  padding-left: 25px;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-  font-family: 'open sans';
-  font-size: 16px;
-  padding-left: 25px;
-}
-
-
 /* Today Special ------------------------------------------------------ */
 
 #today-special {
@@ -729,7 +730,7 @@ button.btn:last-of-type {
 /* Testimonials ------------------------------------------------------ */
 
 #feedback {
-  background-color: #000;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/reservations-bg.jpg') center / cover fixed no-repeat;
 }
 
 #feedback h2 {
@@ -742,7 +743,7 @@ background-color: #000;
 
 .testimonial{
   text-align: center;
-  margin: 0 15px;
+  margin: 0 15px 100px 15px;
   position: relative;
 }
 
@@ -816,4 +817,149 @@ background-color: #000;
 
 .owl-pagination {
   display: none;
+}
+
+/* Contact Us ------------------------------------------------------ */
+
+#contact {
+  position: relative;
+}
+
+#map {
+  height: 615px;
+  width: 100%;;
+}
+
+#map .gm-style a img[src="https://maps.gstatic.com/mapfiles/api-3/images/google_white5_hdpi.png"] {
+  display: none;
+}
+
+.gm-style-cc {
+    display: none;
+}
+
+#contact .container {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.contact-us {
+  background-color: #fff;
+  width: 33.333333%;
+  padding: 40px 25px;
+  position: inherit;
+  bottom: 0;
+  right: 15px;
+  border: 10px solid #e4e4e4;
+  text-align: center;
+}
+
+.contact-us span.text-center {
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+.contact-us .section-title {
+  padding-bottom: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-number {
+  font-family: 'Oswald';
+  font-size: 30px;
+  color: #cf9b67;
+  margin-bottom: 20px;
+}
+
+address {
+  font-style: normal;
+}
+
+address span {
+  font-family: 'Oswald';
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+address p {
+  font-size: 16px;
+}
+
+
+/* Subscribe Form ------------------------------------------------------ */
+
+section.subscribe {
+  background-color: #cf9b67;
+}
+
+section.subscribe .container div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 100px 0;
+}
+
+section.subscribe p {
+  font-family: 'Oswald';
+  font-size: 36px;
+  color: #fff;
+  width: 35%;
+  margin-bottom: 0;
+}
+
+.subscribe-form{
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.subscribe-form input[type="text"] {
+  width: 65%;
+  background-color: #cf9b67;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: #fff;
+}
+
+.subscribe-form input[type="text"]::placeholder {
+  color: #fff;
+}
+
+.subscribe-form input[type="submit"] {
+  width: 30%;
+  color: #cf9b67;
+  border-radius: 10px;
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  font-weight: lighter;
+  transition: background-color .1s linear, color .1s linear;
+}
+
+.subscribe-form input[type="submit"]:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Footer ------------------------------------------------------ */
+
+footer {
+  height: 550px;
+  background-color: #212121;
+}
+
+.copyright-footer {
+  background-color: #161616;
+  text-align: center;
+}
+
+.copyright-footer p {
+  color: #999;
+  padding: 30px 0;
 }
