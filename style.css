@@ -306,16 +306,22 @@ header {
 }
 
 #contact-info i {
-  color: #cf9b67
+  color: #cf9b67;
 }
 
-.social {
+.social i {
   font-size: 16px;
   color: #5a5a5a;
+  transition: color 0.15s linear;
 }
 
 .social i:not(.fa-instagram) {
   margin-right: 15px;
+}
+
+.social i:hover {
+  color: #cf9b67;
+  cursor: pointer;
 }
 
 
@@ -356,11 +362,44 @@ nav > * {
   font-size: 1.2em;
   text-transform: uppercase;
   margin-right: 35px;
+  position: relative;
 }
 
 .nav-menu li:last-child {
   margin: 0;
 }
+
+nav h2 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav h2 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav li.home a:hover:before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  bottom: -9px;
+  width: 6px;
+  height: 6px;
+  background-color: #cf9b67;
+  border-radius: 6px;
+}
+
+nav li.home a:hover:after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  bottom: -7px;
+  width: 30px;
+  height: 2px;
+  background-color: #cf9b67;
+}
+
 
 /* Intro ------------------------------------------------------ */
 
