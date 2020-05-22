@@ -1,3 +1,14 @@
+$(function() {
+
+// Return to Top button config
+  $('#return-to-top').click(function() {      // When arrow is clicked
+      $('body,html').animate({
+          scrollTop : 0                       // Scroll to top of body
+      }, 500);
+  });
+
+});
+
 // Restaurant Menu Filter -------------------------------------- //
 
 filterSelection("signature")
@@ -179,7 +190,3 @@ function initMap() {
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: la, map: map});
 }
-
-var listener = map.addListener('click', aFunction);
-
-google.maps.event.removeListener(listener);

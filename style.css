@@ -400,6 +400,68 @@ nav li.home a:hover:after {
   background-color: #cf9b67;
 }
 
+nav li.menu a:hover:before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  bottom: -9px;
+  width: 6px;
+  height: 6px;
+  background-color: #cf9b67;
+  border-radius: 6px;
+}
+
+nav li.menu a:hover:after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  bottom: -7px;
+  width: 30px;
+  height: 2px;
+  background-color: #cf9b67;
+}
+
+nav li.reserve a:hover:before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  bottom: -9px;
+  width: 6px;
+  height: 6px;
+  background-color: #cf9b67;
+  border-radius: 6px;
+}
+
+nav li.reserve a:hover:after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  bottom: -7px;
+  width: 82px;
+  height: 2px;
+  background-color: #cf9b67;
+}
+
+nav li.contact a:hover:before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  bottom: -9px;
+  width: 6px;
+  height: 6px;
+  background-color: #cf9b67;
+  border-radius: 6px;
+}
+
+nav li.contact a:hover:after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  bottom: -7px;
+  width: 79px;
+  height: 2px;
+  background-color: #cf9b67;
+}
 
 /* Intro ------------------------------------------------------ */
 
@@ -436,12 +498,12 @@ nav li.home a:hover:after {
 
 .scroll-down {
   font-size: 14px;
-  color: #fff;
   text-align: center;
   position: absolute;
   bottom: 0;
   left: 50%;
   margin-left: -38.9px;
+  color: #fff;
 }
 
 .scroll-down p {
@@ -449,7 +511,7 @@ nav li.home a:hover:after {
   font-size: 20px;
 }
 
-.fa-caret-down {
+.fa-caret-down, .fa-caret-up {
   font-size: 24px;
 }
 
@@ -624,6 +686,7 @@ form textarea {
   font-weight: 600;
   width: auto;
   padding: 22px 80px;
+  border: none; 
   border-radius: 10px;
   transition: background-color .1s linear, color .1s linear;
 }
@@ -731,6 +794,7 @@ form textarea {
   margin-right: 30px;
   width: 170px;
   text-transform: uppercase;
+  border: 1px solid #eaeaea;
 }
 
 button.btn:last-of-type {
@@ -1065,10 +1129,36 @@ footer .section-title {
 .copyright-footer {
   background-color: #161616;
   text-align: center;
+  position: relative;
 }
 
 .copyright-footer p {
   color: #999;
   padding: 30px 0;
   margin: 0;
+}
+
+.copyright-footer a {
+  position: absolute;
+  right: 30px;
+  top: -30px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: #cf9b67;
+  color: #fff;
+  border-radius: 60px;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+.fa-caret-up {
+    position: relative;
+    top: 30%;
+}
+
+.copyright-footer a:hover {
+  background: #fff;
+  color: #cf9b67;
+  top: -40px;
 }
