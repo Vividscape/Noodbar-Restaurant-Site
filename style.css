@@ -20,6 +20,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   vertical-align: baseline;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   line-height: 1.5;
 }
@@ -409,40 +414,64 @@ nav h2 a:hover, nav h2 a:focus {
   color: #fff;
   text-decoration: none;
 }
-nav li a:hover:before {
+nav li a:before {
   position: absolute;
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 0;
+  height: 0;
+  opacity: 0;
   left: 8px;
   bottom: -2px;
   border-radius: 6px;
   background-color: #cf9b67;
+  transition: all 0.1s ease-in;
 }
 
-nav li a:hover:after {
+nav li a:after {
   content: "";
   position: absolute;
+  width: 0;
+  opacity: 0;
   left: 20px;
   bottom: 0px;
   height: 2px;
   background-color: #cf9b67;
+  transition: all 0.1s ease-out 0.1s;
 }
 
-nav li.home a:hover:after {
+nav li:hover a:before, nav li a:hover:before {
+  width: 6px;
+  height: 6px;
+  opacity: 1;
+}
+
+nav li.home:hover a:after, nav li.home a:hover:after {
   width: 32px;
+  opacity: 1;
 }
 
-nav li.menu a:hover:after {
+nav li.menu:hover a:after, nav li.menu a:hover:after {
   width: 31px;
+  opacity: 1;
 }
 
-nav li.reserve a:hover:after {
+nav li.reserve:hover a:after,nav li.reserve a:hover:after {
   width: 84px;
+  opacity: 1;
 }
 
-nav li.contact a:hover:after {
+nav li.contact:hover a:after, nav li.contact a:hover:after {
   width: 78px;
+  opacity: 1;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  background: #000 !important;
+  transition: all 0.3s ease-in;
 }
 
 /* Intro ------------------------------------------------------ */

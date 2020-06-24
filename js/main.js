@@ -1,13 +1,45 @@
-$(function() {
+$(document).ready(function() {
 
-// Return to Top button config
-  $('#return-to-top').click(function() {      // When arrow is clicked
-      $('body,html').animate({
+  $(".intro").hide().fadeIn(1000);
+
+// Return to Top button config -------------------------------------- //
+  $("#return-to-top").click(function() {      // When arrow is clicked
+      $("body,html").animate({
           scrollTop : 0                       // Scroll to top of body
       }, 500);
   });
 
+
+  // Testimonials Slider -------------------------------------- //
+  $("#testimonial-slider").owlCarousel({
+      items:3,
+      itemsDesktop:[1000,3],
+      itemsDesktopSmall:[979,2],
+      itemsTablet:[768,2],
+      itemsMobile:[650,1],
+      pagination:true,
+      autoPlay:true
+  });
+
 });
+
+
+// Sticky Navbar  -------------------------------------- //
+
+window.onscroll = function() {
+  myFunction()
+  };
+
+var navbar = document.getElementById("navigation");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 
 // Restaurant Menu Filter -------------------------------------- //
 
@@ -60,21 +92,6 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-
-
-// Testimonials Slider -------------------------------------- //
-
-$(document).ready(function(){
-    $("#testimonial-slider").owlCarousel({
-        items:3,
-        itemsDesktop:[1000,3],
-        itemsDesktopSmall:[979,2],
-        itemsTablet:[768,2],
-        itemsMobile:[650,1],
-        pagination:true,
-        autoPlay:true
-    });
-});
 
 // Init Google Maps -------------------------------------- //
 
