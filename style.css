@@ -732,7 +732,8 @@ form textarea {
 }
 
 .carousel {
-    margin-bottom: 75px;
+  position: relative;
+  margin-bottom: 75px;
 }
 
 .carousel-item .price {
@@ -751,7 +752,37 @@ form textarea {
 }
 
 .text-center p {
-    padding: 0 10px;
+  padding: 0 10px;
+}
+
+svg.bi.bi-caret-right-fill, svg.bi.bi-caret-left-fill {
+  /* position: absolute; */
+  font-size: 1.6em;
+  fill: #cf9b67;
+}
+
+svg.bi.bi-caret-left-fill {
+  right: 60px;
+  transition: all 0.3s ease-in-out;
+}
+
+svg.bi.bi-caret-right-fill {
+  left: 80px;
+  transition: all 0.3s ease-in-out;
+}
+
+a.carousel-control-next:hover svg.bi.bi-caret-right-fill,
+a.carousel-control-next svg.bi.bi-caret-right-fill:hover,
+a.carousel-control-next:focus svg.bi.bi-caret-right-fill,
+a.carousel-control-next svg.bi.bi-caret-right-fill:focus {
+  left: 100px;
+}
+
+a.carousel-control-prev:hover svg.bi.bi-caret-left-fill,
+a.carousel-control-prev svg.bi.bi-caret-left-fill:hover,
+a.carousel-control-prev:focus svg.bi.bi-caret-left-fill,
+a.carousel-control-prev svg.bi.bi-caret-left-fill:focus {
+  right: 80px;
 }
 
 /* Restaurant Menu ------------------------------------------------------ */
@@ -1389,6 +1420,10 @@ footer .section-title {
 
   .hours {
     margin-bottom: 20px;
+  }
+
+  svg.bi.bi-caret-right-fill, svg.bi.bi-caret-left-fill {
+    fill: #fff !important;
   }
 }
 
