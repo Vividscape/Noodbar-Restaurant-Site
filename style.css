@@ -45,10 +45,10 @@ a img { border: none; }
 /* Default font settings.
    The font-size percentage is of 16px. (0.75 * 16px = 12px) */
 body {
-  font-size: 75%;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
   color: #222;
   background: #fff;
-  font-family: "Open Sans", sans-serif;
 }
 
 
@@ -239,10 +239,6 @@ h3 {
   margin-bottom: 15px;
 }
 
-.text-center {
-  text-align: center;
-}
-
 span.text-center {
   padding-top: 100px;
 }
@@ -288,38 +284,47 @@ header {
   color: #fff;
 }
 
-.contact-info i {
+.contact-items i {
   margin-right: 10px;
 }
 
-.contact-info {
+.contact-items {
   display: inline-block;
   margin-right: 40px;
+  padding: 5px 0;
 }
 
 .top-bar-contact {
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 12px;
 }
 
+#contact-info {
+  text-align: center;
+  padding: 15px 0;
+}
+
 #contact-info i {
   color: #cf9b67;
 }
 
-.social i {
+#social {
+  padding: 15px 0;
+}
+
+#social i {
   font-size: 16px;
   color: #5a5a5a;
   transition: color 0.15s linear;
 }
 
-.social i:not(.fa-instagram) {
+#social i:not(.fa-instagram) {
   margin-right: 15px;
 }
 
-.social i:hover {
+#social i:hover {
   color: #cf9b67;
   cursor: pointer;
 }
@@ -335,11 +340,33 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
 }
 
 nav > * {
   margin-bottom: 0;
+}
+
+.navbar {
+  padding: 1.2em 0;
+}
+
+.navbar-brand {
+  font-size: 28px;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-toggler {
+  border: 1.45px solid #fff;
+  margin-right: 1px;
+}
+
+.navbar-toggler-icon svg {
+  font-size: 1.5em;
+  color: #fff;
+  height: 32px;
 }
 
 .nav-menu {
@@ -374,110 +401,65 @@ nav h2 a {
   text-decoration: none;
 }
 
-nav h2 a:hover {
+nav h2 {
+    padding-left: 5px;
+}
+
+nav h2 a:hover, nav h2 a:focus {
   color: #fff;
   text-decoration: none;
 }
-
-nav li.home a:hover:before {
-  content: "";
+nav li a:hover:before {
   position: absolute;
-  left: 1px;
-  bottom: -9px;
+  content: "";
   width: 6px;
   height: 6px;
-  background-color: #cf9b67;
+  left: 8px;
+  bottom: -2px;
   border-radius: 6px;
+  background-color: #cf9b67;
+}
+
+nav li a:hover:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: 0px;
+  height: 2px;
+  background-color: #cf9b67;
 }
 
 nav li.home a:hover:after {
-  content: "";
-  position: absolute;
-  left: 13px;
-  bottom: -7px;
-  width: 30px;
-  height: 2px;
-  background-color: #cf9b67;
-}
-
-nav li.menu a:hover:before {
-  content: "";
-  position: absolute;
-  left: 1px;
-  bottom: -9px;
-  width: 6px;
-  height: 6px;
-  background-color: #cf9b67;
-  border-radius: 6px;
+  width: 32px;
 }
 
 nav li.menu a:hover:after {
-  content: "";
-  position: absolute;
-  left: 13px;
-  bottom: -7px;
-  width: 30px;
-  height: 2px;
-  background-color: #cf9b67;
-}
-
-nav li.reserve a:hover:before {
-  content: "";
-  position: absolute;
-  left: 1px;
-  bottom: -9px;
-  width: 6px;
-  height: 6px;
-  background-color: #cf9b67;
-  border-radius: 6px;
+  width: 31px;
 }
 
 nav li.reserve a:hover:after {
-  content: "";
-  position: absolute;
-  left: 13px;
-  bottom: -7px;
-  width: 82px;
-  height: 2px;
-  background-color: #cf9b67;
-}
-
-nav li.contact a:hover:before {
-  content: "";
-  position: absolute;
-  left: 1px;
-  bottom: -9px;
-  width: 6px;
-  height: 6px;
-  background-color: #cf9b67;
-  border-radius: 6px;
+  width: 84px;
 }
 
 nav li.contact a:hover:after {
-  content: "";
-  position: absolute;
-  left: 13px;
-  bottom: -7px;
-  width: 79px;
-  height: 2px;
-  background-color: #cf9b67;
+  width: 78px;
 }
 
 /* Intro ------------------------------------------------------ */
 
 .intro h1 {
-  font-size: 78px;
+  font-size: 5.6em;
   font-family: 'Oswald';
   margin-bottom: 20px;
 }
 
 .intro h2 {
-  font-size: 78px;
+  font-size: 5.6em;
   margin-bottom: 0;
 }
 
 .intro h3 {
-  font-size: 40px;
+  font-size: 2.86em;
   font-family: 'Architects Daughter';
   text-transform: none;
 }
@@ -491,9 +473,9 @@ nav li.contact a:hover:after {
 .intro {
   text-align: center;
   position: absolute;
+  top: 35%;
   left: 50%;
-  top: 40%;
-  margin-left: -343.71px;
+  margin-left: -345.475px;
 }
 
 .scroll-down {
@@ -502,7 +484,7 @@ nav li.contact a:hover:after {
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left: -38.9px;
+  margin-left: -55.3px;
   color: #fff;
 }
 
@@ -526,19 +508,22 @@ nav li.contact a:hover:after {
 /* special offers ------------------------------------------------------ */
 
 .special-offers {
-  margin: 100px auto;
+  padding: 100px 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .special-offers > div:first-child {
-  margin-right: 68px;
+
 }
 
 .special-items {
+  position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+  padding-right: 50px;
 }
 
 .special-items:last-child {
@@ -549,6 +534,7 @@ nav li.contact a:hover:after {
   width: 110px;
   border: 10px solid #f2f2f2;
   margin-right: 20px;
+  flex: 0 2 auto;
 }
 
 .special-items .price {
@@ -558,19 +544,22 @@ nav li.contact a:hover:after {
   font-family: 'Oswald';
   font-size: 26px;
   color: #000;
+  margin: 0;
+  flex: 0 1 auto;
 }
 
 .item-description {
-  width: 300px;
+  padding-right: 20px;
+  flex: 2 1 auto;
 }
 
 .explore-menu {
-  width: 50%;
   position: relative;
+  height: 600px;
 }
 
 .explore-menu img {
-  width: 100%;
+  width: 600px;
 }
 
 .explore-menu a {
@@ -686,7 +675,7 @@ form textarea {
   font-weight: 600;
   width: auto;
   padding: 22px 80px;
-  border: none; 
+  border: none;
   border-radius: 10px;
   transition: background-color .1s linear, color .1s linear;
 }
@@ -709,11 +698,6 @@ form textarea {
   background-repeat: no-repeat;
 }
 
-/* #today-special .container > div {
-  text-align: center;
-  padding-top: 100px;
-} */
-
 #today-special .carousel-item .w-75 {
     width: 65%!important;
 }
@@ -734,7 +718,11 @@ form textarea {
 }
 
 .carousel-item img {
-  width: 35%;
+  width: 55%;
+}
+
+.text-center p {
+    padding: 0 10px;
 }
 
 /* Restaurant Menu ------------------------------------------------------ */
@@ -745,18 +733,8 @@ form textarea {
   border-width: 1px 0;
 }
 
-#restaurant-menu .container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 #restaurant-menu h2 {
   margin-bottom: 1em;
-}
-
-#myBtnContainer {
-  justify-content: center;
-  margin-bottom: 50px;
 }
 
 #restaurant-menu .filter {
@@ -768,6 +746,7 @@ form textarea {
 
 .restaurant-filter {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .filterDiv {
@@ -951,7 +930,7 @@ background-color: #000;
 
 .contact-us {
   background-color: #fff;
-  width: 33.333333%;
+  width: 400px;
   padding: 40px 25px;
   position: inherit;
   bottom: 0;
@@ -1000,35 +979,33 @@ section.subscribe {
   background-color: #cf9b67;
 }
 
-section.subscribe .container div {
+section.subscribe p {
+  font-family: 'Oswald';
+  font-size: 36px;
+  color: #fff;
+  width: 332px;
+  margin-bottom: 0;
+  padding: 0 15px;
+}
+
+.subscribe-form {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 100px 0;
 }
 
-section.subscribe p {
-  font-family: 'Oswald';
-  font-size: 36px;
-  color: #fff;
-  width: 35%;
-  margin-bottom: 0;
-  padding: 0 15px;
-}
-
-.subscribe-form{
-  width: 65%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+.subscribe-form input {
+  height: 62px;
 }
 
 .subscribe-form input[type="text"] {
-  width: 65%;
+  flex: auto;
   background-color: #cf9b67;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   color: #fff;
+  margin-right: 20px;
 }
 
 .subscribe-form input[type="text"]::placeholder {
@@ -1036,7 +1013,7 @@ section.subscribe p {
 }
 
 .subscribe-form input[type="submit"] {
-  width: 30%;
+  width: 175px;
   color: #cf9b67;
   border-radius: 10px;
   font-family: 'Oswald';
@@ -1102,7 +1079,7 @@ footer .section-title {
 }
 
 .instagram-pics {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -1161,4 +1138,252 @@ footer .section-title {
   background: #fff;
   color: #cf9b67;
   top: -40px;
+}
+
+
+
+/* --------------------------------------------------------------
+
+  * Media Queries
+
+-------------------------------------------------------------- */
+
+@media (max-width: 1240px) {
+  .container {
+    max-width: 950px;
+  }
+
+  .special-offers {
+    padding: 50px 0;
+  }
+
+  .special-offers div div.special-items:last-child {
+    display: none;
+  }
+
+  .section-title {
+    padding-bottom: 25px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 5px;
+  }
+
+  .special-items {
+    margin-bottom: 20px;
+  }
+
+  .explore-menu img {
+    width: 430px;
+  }
+
+  .explore-menu {
+    height: auto;
+  }
+
+}
+
+@media (max-width: 990px) {
+  nav li a:hover:before {
+    left: 0px;
+  }
+
+  nav li a:hover:after {
+    left: 12px;
+  }
+
+}
+
+@media (max-width: 950px) {
+  .container {
+    max-width: 750px;
+    padding: 0 25px;
+  }
+
+  .top-bar-contact {
+    justify-content: center;
+  }
+
+  .top-bar-contact #social {
+    position: absolute;
+    left: -999px;
+  }
+
+  .offers {
+    padding: 70px 0;
+    width: 100%;
+  }
+
+  .special-items {
+    padding-right: 0;
+  }
+
+  .special-offers div div.special-items:last-child {
+    display: flex;
+  }
+
+  .explore-menu {
+    position: absolute;
+    left: -999px;
+  }
+
+  .reserve-form {
+    width: 100%;
+  }
+
+  #restaurant-menu .filter {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .restaurant-filter {
+    margin-bottom: 30px;
+  }
+
+  .btn, button.btn:last-of-type {
+    width: 100px;
+    margin: 0 20px 20px 0;
+  }
+
+  .contact-us {
+    width: 500px;
+    left: 50%;
+    transform: translate(-50%, 1px);
+  }
+
+  .subscribe-form {
+    justify-content: center;
+    padding: 80px 0 100px;
+  }
+
+  section.subscribe p {
+    margin-bottom: 20px;
+  }
+
+  .subscribe-form input[type="text"] {
+    flex: 70%;
+  }
+
+  .instagram {
+    position: absolute;
+    left: -999px;
+  }
+
+}
+
+@media (max-width: 720px) {
+
+  #top-bar {
+    position: absolute;
+    left: -999px;
+  }
+
+  #navigation {
+    background: #000;
+  }
+
+  .intro {
+    top: 40%;
+    margin-left: -242.73px;
+    font-size: 0.7em;
+  }
+
+  .scroll-down {
+    left: -999px;
+  }
+
+  #reservations {
+    background-color: #181818;
+  }
+
+  #reservations .bg-image {
+    display: none;
+  }
+
+  #reservations .container {
+    position: relative;
+    left: unset;
+    transform: none;
+  }
+
+  .reserve-form {
+    min-width: 0;
+    height: auto;
+  }
+
+  .reserve-container {
+    padding: 100px 0;
+  }
+
+  form div.form-row:first-child {
+    grid-template-columns: 1fr;
+  }
+
+  #restaurant-menu .filter {
+    grid-template-columns: 1fr;
+  }
+
+  #map {
+    position: absolute !important;
+    left: -999px;
+  }
+
+  #contact .container {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .contact-us {
+    width: 100vw;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .subscribe-form input[type="text"] {
+    flex: none;
+    margin: 0 0 10px;
+    width: 100%;
+  }
+
+  .footer-info {
+    flex-direction: column;
+  }
+
+  .footer-info > * {
+    width: 100%;
+  }
+
+  .hours {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 490px) {
+  .special-items img {
+      display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .intro {
+    margin-left: -204.86px;
+  }
+}
+
+@media (max-width: 375px) {
+  .intro {
+    margin-left: -184.86px;
+  }
+}
+
+@media (max-width: 330px) {
+  .intro {
+    margin-left: -159.86px;
+    top: 35%;
+  }
 }
