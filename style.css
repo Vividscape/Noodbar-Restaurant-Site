@@ -756,7 +756,6 @@ form textarea {
 }
 
 svg.bi.bi-caret-right-fill, svg.bi.bi-caret-left-fill {
-  /* position: absolute; */
   font-size: 1.6em;
   fill: #cf9b67;
 }
@@ -775,14 +774,14 @@ a.carousel-control-next:hover svg.bi.bi-caret-right-fill,
 a.carousel-control-next svg.bi.bi-caret-right-fill:hover,
 a.carousel-control-next:focus svg.bi.bi-caret-right-fill,
 a.carousel-control-next svg.bi.bi-caret-right-fill:focus {
-  left: 100px;
+  transform: translateX(50px);
 }
 
 a.carousel-control-prev:hover svg.bi.bi-caret-left-fill,
 a.carousel-control-prev svg.bi.bi-caret-left-fill:hover,
 a.carousel-control-prev:focus svg.bi.bi-caret-left-fill,
 a.carousel-control-prev svg.bi.bi-caret-left-fill:focus {
-  right: 80px;
+  transform: translateX(-50px);
 }
 
 /* Restaurant Menu ------------------------------------------------------ */
@@ -1041,7 +1040,7 @@ section.subscribe {
 
 section.subscribe p {
   font-family: 'Oswald';
-  font-size: 36px;
+  font-size: 2.6em;
   color: #fff;
   width: 332px;
   margin-bottom: 0;
@@ -1060,7 +1059,7 @@ section.subscribe p {
 }
 
 .subscribe-form input[type="text"] {
-  flex: auto;
+  flex: 1 0 auto;
   background-color: #cf9b67;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
@@ -1073,7 +1072,7 @@ section.subscribe p {
 }
 
 .subscribe-form input[type="submit"] {
-  width: 175px;
+  flex: 0 1 175px;
   color: #cf9b67;
   border-radius: 10px;
   font-family: 'Oswald';
@@ -1085,6 +1084,11 @@ section.subscribe p {
 .subscribe-form input[type="submit"]:hover {
   background-color: #000;
   color: #fff;
+}
+
+.subscribe-form div {
+    flex: 1 1 400px;
+    display: flex;
 }
 
 /* Footer ------------------------------------------------------ */
@@ -1311,7 +1315,6 @@ footer .section-title {
   }
 
   .subscribe-form {
-    justify-content: center;
     padding: 80px 0 100px;
   }
 
@@ -1319,15 +1322,14 @@ footer .section-title {
     margin-bottom: 20px;
   }
 
-  .subscribe-form input[type="text"] {
-    flex: 70%;
-  }
-
   .instagram {
     position: absolute;
     left: -999px;
   }
 
+  .subscribe-form input[type="submit"] {
+    flex-basis: 150px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1398,18 +1400,6 @@ footer .section-title {
     width: 100vw;
   }
 
-  .subscribe-form {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .subscribe-form input[type="text"] {
-    flex: none;
-    margin: 0 0 10px;
-    width: 100%;
-  }
-
   .footer-info {
     flex-direction: column;
   }
@@ -1425,11 +1415,19 @@ footer .section-title {
   svg.bi.bi-caret-right-fill, svg.bi.bi-caret-left-fill {
     fill: #fff !important;
   }
+
+  section.subscribe p {
+    font-size: 2em;
+  }
 }
 
 @media (max-width: 490px) {
   .special-items img {
       display: none;
+  }
+
+  .subscribe-form input[type="submit"] {
+    flex-basis: 100px;
   }
 }
 
