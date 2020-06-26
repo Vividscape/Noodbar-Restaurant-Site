@@ -1,48 +1,41 @@
-$(document).ready(function() {
+// Animation Fade In script -------------------------- //
 
-  $(".intro").hide().fadeIn(1000);
+(function() {
+  var fadeEl = document.querySelectorAll('.fadeInit');
+  function hide() {
+    for (var i = 0; i < fadeEl.length; i++) {
+      fadeEl[i].classList.add('hide');
+    }
+  }
 
-// Return to Top button config -------------------------------------- //
-  $("#return-to-top").click(function() {      // When arrow is clicked
-      $("body,html").animate({
-          scrollTop : 0                       // Scroll to top of body
-      }, 500);
-  });
+  var elements;
+  var windowHeight;
 
+  function init() {
+    elements = document.querySelectorAll('.hide');
+    windowHeight = window.innerHeight;
+  }
 
-  // Testimonials Slider -------------------------------------- //
-  $("#testimonial-slider").owlCarousel({
-      items:3,
-      itemsDesktop:[1000,3],
-      itemsDesktopSmall:[979,2],
-      itemsTablet:[768,2],
-      itemsMobile:[650,1],
-      pagination:true,
-      autoPlay:true
-  });
+  function checkPosition() {
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var positionFromTop = elements[i].getBoundingClientRect().top;
 
+      if (positionFromTop - windowHeight <= 0) {
+        element.classList.add('fade-in-element');
+        element.classList.remove('hide');
+        element.classList.remove('fadeInit');
+      }
+    }
+  }
 
-  // Smooth Scroll Menu -------------------------------------- //
-  $("#navbarNav a").on('click', function(event) {
+  window.addEventListener('scroll', checkPosition);
+  window.addEventListener('resize', init);
 
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-
-        // Store hash
-        var hash = this.hash;
-        var menu = $("nav").height();
-        console.log(menu);
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top - menu
-        }, 800);
-      } // End if
-    });
-
-});
+  hide();
+  init();
+  checkPosition();
+})();
 
 
 // Sticky Navbar  -------------------------------------- //
@@ -228,3 +221,57 @@ function initMap() {
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: la, map: map});
 }
+
+
+
+
+// ---------------------------------------------- //
+// jQuery Sccripts ---------------------------------------- //
+// ---------------------------------------------- //
+
+
+  $(document).ready(function() {
+
+    // $(".intro").hide().fadeIn(1000);
+
+  // Return to Top button config -------------------------------------- //
+    $("#return-to-top").click(function() {      // When arrow is clicked
+        $("body,html").animate({
+            scrollTop : 0                       // Scroll to top of body
+        }, 500);
+    });
+
+
+    // Testimonials Slider -------------------------------------- //
+    $("#testimonial-slider").owlCarousel({
+        items:3,
+        itemsDesktop:[1000,3],
+        itemsDesktopSmall:[979,2],
+        itemsTablet:[768,2],
+        itemsMobile:[650,1],
+        pagination:true,
+        autoPlay:true
+    });
+
+
+    // Smooth Scroll Menu -------------------------------------- //
+    $("#navbarNav a, .explore-menu a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+          var menu = $("nav").height();
+          console.log(menu);
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top - menu
+          }, 800);
+        } // End if
+      });
+
+  });

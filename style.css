@@ -502,7 +502,7 @@ nav li.contact:hover a:after, nav li.contact a:hover:after {
 .intro {
   text-align: center;
   position: absolute;
-  top: 35%;
+  top: 40%;
   left: 50%;
   margin-left: -345.475px;
 }
@@ -1448,4 +1448,24 @@ footer .section-title {
     margin-left: -159.86px;
     top: 35%;
   }
+}
+
+/* --------------------------------------------------------------
+
+  * Animations
+
+-------------------------------------------------------------- */
+.hide {
+  opacity: 0;
+}
+.hidden {
+  opacity: 0;
+}
+
+@keyframes fade-in {
+    from {opacity: 0; transform: scale(.7,.7)}
+    to {opacity: 1;}
+}
+.fade-in-element {
+  animation: fade-in 1.4s;
 }
