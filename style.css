@@ -248,7 +248,7 @@ span.text-center {
   padding-top: 100px;
 }
 
-input[type="text"], textarea {
+input, textarea, select {
   padding-left: 25px;
   font-size: 16px;
 }
@@ -257,6 +257,7 @@ input[type="text"], textarea {
   font-family: 'open sans';
   font-size: 16px;
   opacity: 1; /* Firefox */
+  color: #5d5d5d;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
@@ -624,6 +625,11 @@ nav li.contact:hover a:after, nav li.contact a:hover:after {
   background-color: #cf9b67;
 }
 
+div.special-items img {
+  background-color: #e4c8ae94;
+  padding: 3px;
+}
+
 /* Reservations ------------------------------------------------------ */
 
 #reservations {
@@ -666,8 +672,11 @@ nav li.contact:hover a:after, nav li.contact a:hover:after {
   padding: 100px 60px;
 }
 
-#reservations form input  {
+#reservations form input,
+#reservations form select,
+#reservations form textarea {
   width: 100%;
+  color: #5d5d5d;
 }
 
 form div.form-row:first-child {
@@ -678,7 +687,8 @@ form div.form-row:first-child {
   margin-bottom: 15px;
 }
 
-form div.form-row:first-child input {
+form div.form-row:first-child input,
+form div.form-row:first-child select {
   height: 62px;
   border-radius: 10px;
 }
@@ -688,7 +698,6 @@ form div.message {
 }
 
 form textarea {
-  width: 100%;
   resize: none;
   height: 144px;
   padding-top: 20px;
@@ -717,6 +726,32 @@ form textarea {
 
 .form-btn {
   text-align: center;
+}
+
+#date:hover,
+#date:active {
+  cursor: pointer;
+  background: #fdf5ce url(images/ui-bg_glass_100_fdf5ce_1x400.png) 50% 50% repeat-x;
+}
+
+#reservations form input:hover,
+#reservations form textarea:hover,
+#reservations form input:focus,
+#reservations form textarea:focus {
+  background: #fdf5ce;
+}
+
+li.ui-state-disabled {
+  display: none !important ;
+}
+
+form a.ui-button {
+  background-image: none !important;
+  border: none;
+}
+
+#time-button span.ui-icon {
+  width: 20px;
 }
 
 /* Today Special ------------------------------------------------------ */
@@ -812,6 +847,14 @@ a.carousel-control-prev svg.bi.bi-caret-left-fill:focus {
   float: left;
   color: #ffffff;
   text-align: center;
+  display: none;
+}
+
+.card {
+  border: none;
+}
+
+.card-body {
   display: none;
 }
 
@@ -1455,9 +1498,7 @@ footer .section-title {
   * Animations
 
 -------------------------------------------------------------- */
-.hide {
-  opacity: 0;
-}
+
 .hidden {
   opacity: 0;
 }

@@ -4,7 +4,7 @@
   var fadeEl = document.querySelectorAll('.fadeInit');
   function hide() {
     for (var i = 0; i < fadeEl.length; i++) {
-      fadeEl[i].classList.add('hide');
+      fadeEl[i].classList.add('hidden');
     }
   }
 
@@ -12,7 +12,7 @@
   var windowHeight;
 
   function init() {
-    elements = document.querySelectorAll('.hide');
+    elements = document.querySelectorAll('.hidden');
     windowHeight = window.innerHeight;
   }
 
@@ -23,7 +23,7 @@
 
       if (positionFromTop - windowHeight <= 0) {
         element.classList.add('fade-in-element');
-        element.classList.remove('hide');
+        element.classList.remove('hidden');
         element.classList.remove('fadeInit');
       }
     }
@@ -255,7 +255,7 @@ function initMap() {
 
 
     // Smooth Scroll Menu -------------------------------------- //
-    $("#navbarNav a, .explore-menu a").on('click', function(event) {
+    $('#navbarNav a, .explore-menu a').on('click', function(event) {
 
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
@@ -272,6 +272,24 @@ function initMap() {
             scrollTop: $(hash).offset().top - menu
           }, 800);
         } // End if
+      });
+
+
+      // Reservation Form -------------------------------------- //
+      $('#date').datepicker({
+        firstDay: 1,
+        showButtonPanel: true,
+        currentText: "Today",
+        closeText: "Close",
+        minDate: 0,
+        maxDate: "+3M"
+      });
+
+      $('#time').selectmenu();
+
+      $('#number').spinner({
+        min: 1,
+        max: 10
       });
 
   });
