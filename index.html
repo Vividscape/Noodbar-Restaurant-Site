@@ -124,15 +124,15 @@
             <div class="reserve-container">
               <span class="section-subtitle">Your Table</span>
               <h2 class="section-title">reservation now!</h2>
-              <form class="" action="index.html" method="post">
+              <form>
                 <div class="form-row">
                   <input type="text" name="name" placeholder="Name" required>
                   <input type="tel" name="contact" placeholder="Contact Number" required>
                   <input type="email" name="email" placeholder="Email Address">
-                  <input id="number" name="number-of-person" placeholder="Number of Person">
+                  <input id="number" type="number" name="number-of-person" placeholder="Number of Person">
                   <input type="text" id="date" name="book" placeholder="Book Date" required>
                   <select id="time" required>
-                    <option id="test" value="" disabled selected>Book Time</option>
+                    <option id="test" disabled selected>Book Time</option>
                     <optgroup label="Lunch">
                       <option value="11:00am">11:00am</option>
                       <option value="12:00pm">12:00pm</option>
@@ -422,10 +422,10 @@
       </section>
       <section class="subscribe">
         <div class="container">
-          <form class="subscribe-form" action="index.html" method="post">
+          <form class="subscribe-form">
             <p>Subscribe Newsletter</p>
             <div>
-              <input type="text" name="email-address" placeholder="Email Address">
+              <input type="email" name="email-address" placeholder="Email Address" required>
               <input type="submit" name="submit" value="submit">
             </div>
           </form>

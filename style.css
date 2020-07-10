@@ -253,6 +253,10 @@ input, textarea, select {
   font-size: 16px;
 }
 
+form.subscribe-form input[type="submit"] {
+  padding: 0;
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   font-family: 'open sans';
   font-size: 16px;
@@ -1101,7 +1105,7 @@ section.subscribe p {
   height: 62px;
 }
 
-.subscribe-form input[type="text"] {
+.subscribe-form input[type="email"] {
   flex: 1 0 auto;
   background-color: #cf9b67;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1110,7 +1114,7 @@ section.subscribe p {
   margin-right: 20px;
 }
 
-.subscribe-form input[type="text"]::placeholder {
+.subscribe-form input[type="email"]::placeholder {
   color: #fff;
 }
 
