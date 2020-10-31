@@ -1552,8 +1552,7 @@ footer .section-title {
   }
 
   .explore-menu {
-    position: absolute;
-    left: -999px;
+    display: none;
   }
 
   .reserve-form {
