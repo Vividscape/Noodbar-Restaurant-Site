@@ -320,14 +320,20 @@ header {
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/header_background.jpg') center / cover fixed no-repeat;
   height: 100vh;
   position: relative;
+  /* overflow: hidden; */
 }
 
 
 /* Top Bar -------------------------------------------------- */
 
 #top-bar {
+  position: relative;
+  z-index: 10;
   background: #000;
   color: #fff;
+  transform: translateY(-100px);
+  transform-origin: top;
+  animation: clear .5s linear .1s forwards;
 }
 
 .contact-items i {
@@ -388,6 +394,12 @@ header {
 
 #navigation {
   background: rgba(0,0,0,0.5);
+  transform: translateY(-200px);
+  transform-origin: top;
+  animation: clear 1s ease-in-out .25s forwards;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 nav {
@@ -532,12 +544,18 @@ nav li.contact:hover a:after, nav li.contact a:hover:after {
   width: 100%;
   z-index: 9;
   background: #000 !important;
-  -webkit-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
 }
 
 /* Intro ------------------------------------------------------ */
+
+.intro {
+  overflow: hidden;
+}
+
+.intro div {
+  transform: translateY(400px);
+  animation: clear .8s ease-in-out 1s forwards;
+}
 
 .intro h1 {
   font-size: 5.6em;
@@ -626,6 +644,8 @@ nav li.contact:hover a:after, nav li.contact a:hover:after {
           align-items: center;
   margin-bottom: 40px;
   padding-right: 50px;
+  transform: translateX(-600px);
+  transition: transform .4s ease-in-out;
 }
 
 .special-items:last-child {
@@ -664,6 +684,8 @@ nav li.contact:hover a:after, nav li.contact a:hover:after {
 .explore-menu {
   position: relative;
   height: 600px;
+  transform: translateX(600px);
+  transition: transform .8s linear .3s;
 }
 
 .explore-menu img {
@@ -697,7 +719,6 @@ nav li.contact:hover a:after, nav li.contact a:hover:after {
 .explore-menu a span {
   font-family: 'Architects Daughter';
   text-transform: none;
-  /* color: #cf9b67; */
 }
 
 .explore-menu a:hover {
@@ -752,6 +773,8 @@ div.special-items img {
   min-width: 650px;
   height: 830px;
   background-color: #181818;
+  transform: translateY(900px);
+  transition: transform .8s ease-in-out;
 }
 
 .reserve-container {
@@ -962,6 +985,9 @@ a.carousel-control-prev svg.bi.bi-caret-left-fill:focus {
 .restaurant-filter {
   text-align: center;
   margin-bottom: 50px;
+  transform: translateX(-100vw);
+  transform-origin: left;
+  transition: 1s ease-in;
 }
 
 .filterDiv {
@@ -1066,6 +1092,11 @@ button.btn:last-of-type {
 background-color: #000;
 }
 
+.testimonials {
+  opacity: 0;
+  transition: all .8s ease-in-out .3s;
+}
+
 .testimonial{
   text-align: center;
   margin: 0 15px 100px 15px;
@@ -1146,6 +1177,7 @@ background-color: #000;
 
 #contact {
   position: relative;
+  overflow: hidden;
 }
 
 #map {
@@ -1158,7 +1190,7 @@ background-color: #000;
 }
 
 .gm-style-cc {
-    display: none;
+  display: none;
 }
 
 #contact .container {
@@ -1181,6 +1213,8 @@ background-color: #000;
   right: 0;
   border: 10px solid #e4e4e4;
   text-align: center;
+  transform: translateY(500px);
+  transition: transform .4s linear .3s;
 }
 
 .contact-us span.text-center {
@@ -1542,10 +1576,6 @@ footer .section-title {
 
   .contact-us {
     width: 500px;
-    left: 50%;
-    -webkit-transform: translate(-50%, 1px);
-        -ms-transform: translate(-50%, 1px);
-            transform: translate(-50%, 1px);
   }
 
   .subscribe-form {
@@ -1635,6 +1665,7 @@ footer .section-title {
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
+    padding: 0;
   }
 
   .contact-us {
@@ -1705,16 +1736,14 @@ footer .section-title {
   opacity: 0;
 }
 
-@-webkit-keyframes fade-in {
-    from {opacity: 0; -webkit-transform: scale(.7,.7); transform: scale(.7,.7)}
-    to {opacity: 1;}
+.clear {
+  opacity: 1;
+  transform: none;
 }
 
-@keyframes fade-in {
-    from {opacity: 0; -webkit-transform: scale(.7,.7); transform: scale(.7,.7)}
-    to {opacity: 1;}
-}
-.fade-in-element {
-  -webkit-animation: fade-in 1.4s;
-          animation: fade-in 1.4s;
+@-webkit-keyframes clear {
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }

@@ -1,59 +1,91 @@
 // Animation Fade In script -------------------------- //
 
 (function() {
-  var fadeEl = document.querySelectorAll('.fadeInit');
-  function hide() {
-    for (var i = 0; i < fadeEl.length; i++) {
-      fadeEl[i].classList.add('hidden');
+  let intro = document.querySelector('.intro');
+  let specialsSection = document.querySelector('.special-offers');
+  let exploreMenu = document.querySelector('.explore-menu');
+  let specialItems = document.querySelectorAll('.special-items');
+  let reservations = document.querySelector('#reservations');
+  let form = document.querySelector('.reserve-form');
+  let menuContainer = document.querySelector('#restaurant-menu');
+  let menuFilter = document.querySelector('.restaurant-filter');
+  let feedback = document.querySelector('#feedback');
+  let testimonials = document.querySelector('.testimonials');
+  let contactContainer = document.querySelector('#contact');
+  let contactInfo = document.querySelector('.contact-us');
+
+  window.onscroll = function() {
+    myFunction();
+  }
+
+  function myFunction() {
+
+    let navbar = document.querySelector('#navigation');
+    let sticky = navbar.getBoundingClientRect().top;
+
+    if (window.pageYOffset > sticky) {
+      navbar.classList.add('sticky')
+    } else {
+      navbar.classList.remove('sticky');
     }
+
   }
 
-  var elements;
-  var windowHeight;
 
-  function init() {
-    elements = document.querySelectorAll('.hidden');
-    windowHeight = window.innerHeight;
-  }
+  function moveEffects() {
 
-  function checkPosition() {
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-      var positionFromTop = elements[i].getBoundingClientRect().top;
+    let top = window.pageYOffset;
 
-      if (positionFromTop - windowHeight <= 0) {
-        element.classList.add('fade-in-element');
-        element.classList.remove('hidden');
-        element.classList.remove('fadeInit');
+    let specialsTop = specialsSection.getBoundingClientRect().top + 500;
+    let reservationsTop = reservations.getBoundingClientRect().top + 700;
+    let menuTop = menuContainer.getBoundingClientRect().top + 300;
+    let feedbackTop = feedback.getBoundingClientRect().top + 500;
+    let contactTop = contactContainer.getBoundingClientRect().top + 500;
+
+    intro.style.transform = `translateY(-${top / 3}px)`;
+    intro.style.opacity = 1 - Math.max(top / (window.innerHeight * 0.4), 0);
+
+    if ( specialsTop < window.innerHeight) {
+
+      for (var i = 0; i < specialItems.length; i++) {
+        task(i);
       }
+
+      function task(i) {
+        setTimeout(function () {
+            specialItems[i].classList.add('clear');
+        }, 300 * i);
+      }
+
+      exploreMenu.classList.add('clear');
     }
+
+    if (reservationsTop < window.innerHeight) {
+      form.classList.add('clear');
+    }
+
+    if (menuTop < window.innerHeight) {
+      menuFilter.classList.add('clear');
+    }
+
+    if (feedbackTop < window.innerHeight) {
+      testimonials.classList.add('clear');
+    }
+
+    if (contactTop < window.innerHeight) {
+      contactInfo.classList.add('clear');
+    }
+
+    window.requestAnimationFrame(moveEffects);
   }
+  window.requestAnimationFrame(moveEffects);
 
-  window.addEventListener('scroll', checkPosition);
-  window.addEventListener('resize', init);
-
-  hide();
-  init();
-  checkPosition();
 })();
 
 
 // Sticky Navbar  -------------------------------------- //
 
-window.onscroll = function() {
-  myFunction()
-  };
 
-var navbar = document.getElementById("navigation");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
 
 // Restaurant Menu Filter -------------------------------------- //
 
