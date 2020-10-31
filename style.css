@@ -1543,6 +1543,7 @@ footer .section-title {
 
   .special-items {
     padding-right: 0;
+    transform: translateX(-999px);
   }
 
   .special-offers div div.special-items:last-child {
